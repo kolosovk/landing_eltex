@@ -16,6 +16,7 @@
   width: 60%;
   top: 10px;
   left: 20%;
+  margin-top: 20px;
 }
 .header .headerMenu .mainMenu {
   list-style: none;
@@ -24,18 +25,49 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: Montserrat;
   font-size: 12px;
+  margin: 0;
+  min-height: 60px;
 }
 .header .headerMenu .mainMenu .mainMenuItem {
-  margin: 0 5px;
+  margin-left: 20px;
   box-sizing: border-box;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.header .headerMenu .mainMenu .mainMenuItem:hover {
+  opacity: 1;
 }
 .header .headerMenu .mainMenu .smallButton {
   color: #fff;
   background-color: #000;
-  padding: 10px 5px;
+  padding: 10px 15px;
   position: relative;
+  opacity: 1;
+}
+.header .headerMenu .menuDrop {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  background-color: #000;
+  list-style: none;
+  padding: 20px;
+  min-width: 100px;
+  display: none;
+}
+.header .headerMenu .menuDrop.active {
+  display: block;
+}
+.header .headerMenu .menuDrop .dropMenuItem {
+  color: #fff;
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.header .headerMenu .menuDrop .dropMenuItem:hover {
+  opacity: 1;
 }
 .header .layer {
   position: absolute;
@@ -113,36 +145,50 @@
   align-items: center;
   width: 80%;
   margin: 0 auto;
+  min-height: 800px;
+  height: 1px;
 }
-.iPhoneWrap .iPhone .slider {
+.iPhoneWrap .iPhone .sliderBox {
   position: relative;
-}
-.iPhoneWrap .iPhone .slider .previous {
-  position: absolute;
+  width: 70%;
+  height: 100%;
   left: 10%;
-  bottom: 10%;
+  display: flex;
+  align-items: center;
 }
-.iPhoneWrap .iPhone .slider .next {
+.iPhoneWrap .iPhone .sliderBox .iPhonePic {
   position: absolute;
-  right: 10%;
+  width: 100%;
+  height: 80%;
   top: 10%;
 }
-.iPhoneWrap .iPhone .slider .iPhonePic {
-  width: 100%;
+.iPhoneWrap .iPhone .sliderBox .w3-content {
+  width: 400px;
+  transform: rotate(-45deg);
+}
+.iPhoneWrap .iPhone .sliderBox .w3-content .mySlides {
+  margin: 0 auto;
 }
 .iPhoneWrap .iPhone .block {
   position: relative;
   background-color: #fff;
   font-family: Montserrat;
   margin: 5% 0;
+  width: 30%;
+  padding: 30px;
 }
 .iPhoneWrap .iPhone .block .blockItem {
   display: flex;
+  margin: 20px 0;
 }
-.iPhoneWrap .iPhone .block .blockItem .blockItemName {
+.iPhoneWrap .iPhone .block .blockItem .blockItemContent {
+  margin-left: 10px;
+}
+.iPhoneWrap .iPhone .block .blockItem .blockItemContent .blockItemName {
   font-size: 18px;
+  margin-top: 0;
 }
-.iPhoneWrap .iPhone .block .blockItem .blockItemtext {
+.iPhoneWrap .iPhone .block .blockItem .blockItemContent .blockItemtext {
   font-size: 14px;
 }
 .iPhoneWrap .iPhone .block .blockButton {
@@ -152,6 +198,10 @@
   width: 100%;
   cursor: pointer;
   padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .buildIt {
   display: flex;

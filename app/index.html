@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
   <body>
     <!-- Header -->
@@ -21,8 +22,16 @@
           <li class="mainMenuItem">Work</li>
           <li class="mainMenuItem smallButton">Start a project</li>
           <li class="mainMenuItem">
-            <img src="img/MenuIcon.png" alt="Menu Icon" />
+            <img src="img/MenuIcon.png" alt="Menu Icon" onclick="toggleMenu()"/>
           </li>
+        </ul>
+        <ul class="menuDrop">
+          <li class="dropMenuItem">About us</li>
+          <li class="dropMenuItem">Company</li>
+          <li class="dropMenuItem">Our process</li>
+          <li class="dropMenuItem">Services</li>
+          <li class="dropMenuItem">Contact us</li>
+          <li class="dropMenuItem">F.A.Q.</li>
         </ul>
       </div>
       <img src="img/Layer3.png" alt="Layer" class="layer" />
@@ -65,14 +74,25 @@
     <!-- iPhoneBlock -->
     <div data-scroll-watch class="iPhoneWrap">
       <div class="iPhone">
-        <div class="slider">
-          <img src="img/Previous.png" alt="left arrow" class="previous" />
+        <div class="sliderBox">
           <img
             src="img/iPhone from Shakuro.png"
             alt="iPhone"
             class="iPhonePic"
           />
-          <img src="img/Next.png" alt="right arrow" class="next" />
+          <div class="w3-content w3-display-container">
+            <img class="mySlides" src="img/iLogo.png" style="width:50%" />
+            <img class="mySlides" src="img/mail.png" style="width:50%" />
+            <img class="mySlides" src="img/Bage.png" style="width:50%" />
+            <img class="mySlides" src="img/briefcase.png" style="width:50%" />
+      
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
+              &#10094;
+            </button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
+              &#10095;
+            </button>
+          </div>
         </div>
         <div class="block">
           <div class="blockItem">
@@ -370,13 +390,41 @@
         </div>
       </div>
     </footer>
-
+    <!-- ScrollWatch js -->
     <script src="https://rawgit.com/edull24/ScrollWatch/v2.0.1/dist/ScrollWatch-2.0.1.min.js"></script>
 
     <script>
       (function() {
         var swInstance = new ScrollWatch({});
-      })();
+    })();
+    // Toggle Menu
+    toggleMenu = () => {
+        var menu = document.querySelector('.menuDrop')
+        menu.classList.toggle('active')
+    }
+    // slider
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
     </script>
   </body>
 </html>
