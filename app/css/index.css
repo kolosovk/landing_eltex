@@ -1,30 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
 .header {
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height: 0;
   padding-top: 56.06%;
+  opacity: 0;
+  transition: opacity 1s;
 }
 .header .headerMenu {
   position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 60%;
   top: 10px;
   left: 20%;
@@ -32,30 +20,16 @@
 .header .headerMenu .mainMenu {
   list-style: none;
   text-transform: uppercase;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   font-family: Montserrat;
   font-size: 12px;
 }
 .header .headerMenu .mainMenu .mainMenuItem {
   margin: 0 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .header .headerMenu .mainMenu .smallButton {
   color: #fff;
@@ -88,63 +62,38 @@
   margin: 0;
 }
 .firstFeautures {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 60%;
   margin: 0 auto;
+  opacity: 0;
+  transition: opacity 1s;
 }
 .firstFeautures .card {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
   font-family: Montserrat;
   min-height: 250px;
 }
 .firstFeautures .card .cardImg {
-  -webkit-flex-basis: 25%;
-      -ms-flex-preferred-size: 25%;
-          flex-basis: 25%;
+  flex-basis: 25%;
 }
 .firstFeautures .card .cardName {
-  -webkit-flex-basis: 25%;
-      -ms-flex-preferred-size: 25%;
-          flex-basis: 25%;
+  flex-basis: 25%;
   margin: 0;
   text-transform: uppercase;
   font-size: 14px;
 }
 .firstFeautures .card .cardText {
-  -webkit-flex-basis: 40%;
-      -ms-flex-preferred-size: 40%;
-          flex-basis: 40%;
+  flex-basis: 40%;
   margin: 0;
   font-size: 14px;
 }
 .firstFeautures .card .cardButton {
-  -webkit-flex-basis: 10%;
-      -ms-flex-preferred-size: 10%;
-          flex-basis: 10%;
+  flex-basis: 10%;
   text-transform: uppercase;
   border: none;
   background: transparent;
@@ -155,18 +104,13 @@
 .iPhoneWrap {
   position: relative;
   background-color: #26e6e6;
-  font-family: Montserrat;
+  opacity: 0;
+  transition: opacity 1s;
 }
 .iPhoneWrap .iPhone {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 80%;
   margin: 0 auto;
 }
@@ -193,9 +137,6 @@
   margin: 5% 0;
 }
 .iPhoneWrap .iPhone .block .blockItem {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 .iPhoneWrap .iPhone .block .blockItem .blockItemName {
@@ -212,7 +153,406 @@
   cursor: pointer;
   padding: 10px;
 }
+.buildIt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Montserrat;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.buildIt .buildContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.buildIt .buildContent .buildName {
+  font-size: 72px;
+}
+.buildIt .buildContent .buildText {
+  font-size: 18px;
+}
+.buildIt .buildCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+.buildIt .buildCards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-family: Montserrat;
+  min-height: 250px;
+}
+.buildIt .buildCards .card .cardName {
+  flex-basis: 25%;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.buildIt .buildCards .card .cardText {
+  flex-basis: 40%;
+  margin: 0;
+  font-size: 14px;
+}
+.buildIt .buildCards .card .cardButton {
+  flex-basis: 10%;
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.iPad {
+  position: relative;
+  background-color: #000;
+  width: 80%;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.iPad .content {
+  color: #fff;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 40%;
+  margin-left: 10%;
+}
+.iPad .content .iPadHead {
+  font-size: 36px;
+}
+.iPad .iPadButton {
+  background-color: #26e6e6;
+  border: none;
+  border-radius: 20px;
+  color: #000;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+.iPad .image {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  margin-right: -10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80%;
+}
+.iPad .image img {
+  max-height: 600px;
+}
+.platform {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.platform .block {
+  position: relative;
+  background-color: #fff;
+  margin: 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.platform .block .blockItem {
+  display: flex;
+  flex-basis: 30%;
+}
+.platform .block .blockItem .blockItemName {
+  font-size: 18px;
+}
+.platform .block .blockItem .blockItemtext {
+  font-size: 14px;
+}
+.quotes {
+  position: relative;
+  min-height: 550px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.quotes .quote {
+  position: relative;
+  margin: 0 auto;
+  width: 40%;
+}
+.quotes .quote .quoteup {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.quotes .quote .quotedown {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.quotes .quote .quoteText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px 0;
+  width: 90%;
+}
+.quotes .quote .quoteText p {
+  text-align: center;
+  font-size: 42px;
+}
+.quotes .quote .quoteText p:last-child {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.quotes .quoteLeft {
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 40%;
+}
+.quotes .quoteLeft .quoteup {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.quotes .quoteLeft .quotedown {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.quotes .quoteLeft .quoteText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px 0;
+  width: 90%;
+}
+.quotes .quoteLeft .quoteText p {
+  text-align: center;
+  font-size: 42px;
+}
+.quotes .quoteLeft .quoteText p:last-child {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.quotes .quoteRight {
+  position: absolute;
+  top: 0;
+  right: -20%;
+  width: 40%;
+}
+.quotes .quoteRight .quoteup {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.quotes .quoteRight .quotedown {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.quotes .quoteRight .quoteText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px 0;
+  width: 90%;
+}
+.quotes .quoteRight .quoteText p {
+  text-align: center;
+  font-size: 42px;
+}
+.quotes .quoteRight .quoteText p:last-child {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.doIt {
+  width: 100%;
+  position: relative;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.doIt .doItWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.doIt .doItWrap .doItName {
+  text-transform: uppercase;
+  font-size: 26px;
+}
+.doIt .doItWrap .doItPhoto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.doIt .doItWrap .doItPhoto .photoDemo {
+  position: relative;
+}
+.doIt .doItWrap .doItPhoto .photoDemo .photoButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #26e6e6;
+  text-transform: uppercase;
+  width: 140px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -70px;
+}
+.doIt .doItWrap .doItPhoto2 {
+  margin: 20px;
+}
+.doIt .leftPhoto {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.doIt .rightPhoto {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+.join {
+  width: 80%;
+  text-align: center;
+  margin: 100px auto;
+  font-size: 72px;
+}
+.prices {
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.prices .inactive {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 10px;
+}
+.prices .inactive .name {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.prices .inactive .price {
+  font-size: 50px;
+}
+.prices .inactive .about {
+  text-align: center;
+  font-size: 14px;
+}
+.prices .inactive .getStarted {
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+}
+.prices .active {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 10px;
+}
+.prices .active .name {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.prices .active .price {
+  font-size: 50px;
+}
+.prices .active .about {
+  text-align: center;
+  font-size: 14px;
+}
+.prices .active .getStarted {
+  border: none;
+  border-radius: 30px;
+  background: #26e6e6;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.footer .footerLayer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+.footer .footerText {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  z-index: -2;
+}
+.footer .footerText h3 {
+  text-align: right;
+  font-size: 90px;
+}
+.footer .footerMenu {
+  margin: 0 auto;
+  width: 60%;
+  min-height: 200px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 100px;
+}
+.footer .footerMenu .singleFooterMenu {
+  list-style: none;
+  text-transform: uppercase;
+}
+.footer .footerMenu .singleFooterMenu li {
+  padding-bottom: 20px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.footer .footerMenu .footerAtt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 body {
   margin: 0;
   position: relative;
+  font-family: Montserrat;
+}
+body div.scroll-watch-in-view,
+body footer.scroll-watch-in-view {
+  opacity: 1;
 }

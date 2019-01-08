@@ -1,0 +1,48 @@
+.prices
+    width: 60%
+    display flex
+    margin 0 auto
+    opacity: 0;
+    transition: opacity 1s;
+    .inactive
+        min-height: 450px
+        display flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        padding: 20px 10px
+        .name
+            text-transform: uppercase
+            font-size: 12px
+        .price
+            font-size: 50px
+        .about
+            text-align: center
+            font-size: 14px
+        .getStarted
+            border none
+            background: transparent
+            text-transform uppercase
+    .active
+        min-height: 450px
+        display flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        background-color #000000
+        color #ffffff
+        padding: 20px 10px
+        .name
+            text-transform: uppercase
+            font-size: 12px
+        .price
+            font-size: 50px
+        .about
+            text-align: center
+            font-size: 14px
+        .getStarted
+            border none
+            border-radius 30px
+            background: #26e6e6
+            padding 10px 20px
+            text-transform uppercase

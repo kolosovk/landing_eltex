@@ -1,0 +1,46 @@
+.footer
+    position relative
+    display flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    opacity: 0;
+    transition: opacity 1s;
+    .footerLayer
+        position: absolute
+        bottom 0
+        left 0
+        width 100%
+        z-index -1
+    .footerText
+        position relative
+        width: 80%
+        margin 0 auto
+        text-transform: uppercase
+        z-index -2
+        h3
+            text-align: right
+            font-size 90px
+    .footerMenu
+        margin: 0 auto 
+        width 60%
+        min-height 200px
+        padding 50px
+        display flex
+        justify-content: space-between
+        align-content: flex-start
+        background-color #000000
+        color #ffffff
+        margin-bottom: 100px
+        .singleFooterMenu
+            list-style: none
+            text-transform: uppercase
+            li
+                padding-bottom: 20px
+                cursor: pointer
+                font-size: 12px
+        .footerAtt
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: flex-end

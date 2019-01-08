@@ -1,0 +1,47 @@
+.buildIt
+    display flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    font-family: Montserrat
+    opacity: 0;
+    transition: opacity 1s;
+    .buildContent
+        display flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        .buildName
+            font-size: 72px
+        .buildText
+            font-size: 18px
+    .buildCards
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 80%
+        .card
+            display flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            text-align: center
+            font-family: Montserrat
+            min-height: 250px
+            .cardName
+                flex-basis:  25%
+                margin: 0
+                text-transform: uppercase
+                font-size: 14px
+            .cardText
+                flex-basis: 40%
+                margin: 0
+                font-size: 14px
+            .cardButton
+                flex-basis: 10%
+                text-transform: uppercase
+                border: none 
+                background: transparent
+                font-size: 14px
+                font-weight: bold
+                cursor pointer
