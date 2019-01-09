@@ -10,7 +10,7 @@ var autoprefixer = require("gulp-autoprefixer");
 
 gulp.task("stylus", function() {
   return gulp
-    .src("./app/stylus/**/*.styl")
+    .src("./app/stylus/index.styl")
     .pipe(stylus())
     .pipe(
       autoprefixer(["last 15 versions", "> 1%", "ie 8", "ie 7"], {
@@ -29,6 +29,8 @@ gulp.task("css-libs", function() {
     .pipe(gulp.dest("app/css"));
 });
 
+gulp.task("style", gulp.series("stylus", "css-libs"));
+
 gulp.task("browser-sync", function() {
   browserSync({
     server: {
@@ -38,18 +40,16 @@ gulp.task("browser-sync", function() {
   });
 });
 
-gulp.task("clean", function() {
-  return del.sync("dist");
+gulp.task("clean", function(done) {
+  return del.sync("dist"), done();
 });
 
-gulp.task("build", function() {
+gulp.task("replace", function(done) {
   gulp.src("app/css/index.min.css").pipe(gulp.dest("dist/css"));
+  gulp.src("app/js/index.js").pipe(gulp.dest("dist/js"));
   gulp.src("app/**/*.html").pipe(gulp.dest("dist"));
+  gulp.src("app/img/**/*.*").pipe(gulp.dest("dist/img"));
   done();
-});
-
-gulp.task("def", function() {
-  gulp.series(["clean", "build"]);
 });
 
 gulp.task("img", function() {
@@ -66,9 +66,6 @@ gulp.task("img", function() {
     .pipe(gulp.dest("dist/img"));
 });
 
-gulp.task("watch", function() {
-  // gulp.watch("app/stylus/*.styl", gulp.parallel("stylus"));
-  gulp.watch("./app/index.html", browserSync.reload());
-});
-
 gulp.task("default", gulp.parallel("stylus", "browser-sync", "css-libs"));
+
+gulp.task("build", gulp.series("style", "clean", "replace"));
