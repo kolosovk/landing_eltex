@@ -5,6 +5,7 @@
     margin 0 auto
     opacity: 0;
     transition: opacity 1s;
+    min-height: 400px
     .card
         display flex
         flex-direction: column
@@ -15,17 +16,22 @@
         min-height: 250px
         .cardImg
             flex-basis 25%
+            display: flex
+            align-items: center
         .cardName
-            flex-basis:  25%
+            flex-basis:  15%
             margin: 0
             text-transform: uppercase
             font-size: 14px
+            font-weight: bold
+            .newIcon
+                margin-left 10px
         .cardText
-            flex-basis: 40%
-            margin: 0
+            flex-basis: 30%
+            margin: 0 20px
             font-size: 14px
         .cardButton
-            flex-basis: 10%
+            flex-basis: 30%
             text-transform: uppercase
             border: none 
             background: transparent

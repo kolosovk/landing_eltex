@@ -43,7 +43,7 @@
     <!-- First feautures -->
     <div data-scroll-watch class="firstFeautures">
       <div class="card">
-        <img src="img/mail.png" alt="mail" class="cardImg" />
+        <div class="cardImg"><img src="img/mail.png" alt="mail" /></div>
         <h3 class="cardName">Get a customize email address and more</h3>
         <p class="cardText">
           Looking cautiously round, to ascertain that they were not overheard,
@@ -52,18 +52,18 @@
         <button class="cardButton">Learn More</button>
       </div>
       <div class="card">
-        <img src="img/edit.png" alt="edit" class="cardImg" />
+        <div class="cardImg"><img src="img/edit.png" alt="edit" /></div>
         <h3 class="cardName">40 million high quality images</h3>
         <p class="cardText">
           At first, for some time, I was not able to answer him one word; but as
           had taken me in his arms I held fast by him, or I should have fallen
-          to the ground/
+          to the ground.
         </p>
         <button class="cardButton">Learn More</button>
       </div>
       <div class="card">
-        <img src="img/card.png" alt="card" class="cardImg" />
-        <h3 class="cardName">Create a simple logo</h3>
+        <div class="cardImg"><img src="img/card.png" alt="card" /></div>
+        <h3 class="cardName">Create a simple logo<img class="newIcon" src="img/Bage.png" /></h3>
         <p class="cardText">
           She gave my mother such a turn, that I have always been convinced I am
           indebted to Miss Betsey for having been born on a Friday.
@@ -81,17 +81,16 @@
             class="iPhonePic"
           />
           <div class="w3-content w3-display-container">
-            <img class="mySlides" src="img/iLogo.png" style="width:50%" />
-            <img class="mySlides" src="img/mail.png" style="width:50%" />
-            <img class="mySlides" src="img/Bage.png" style="width:50%" />
-            <img class="mySlides" src="img/briefcase.png" style="width:50%" />
-      
-            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
-              &#10094;
-            </button>
-            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
-              &#10095;
-            </button>
+            <img class="mySlides" src="img/iLogo.png" />
+            <img class="mySlides" src="img/mail.png" />
+            <img class="mySlides" src="img/Bage.png" />
+            <img class="mySlides" src="img/briefcase.png" />      
+            <div class="w3-display-left" onclick="plusDivs(-1)">
+              <img src="img/Previous.png" alt="previous" class="prevSlide">
+            </div>
+            <div class="w3-display-right" onclick="plusDivs(1)">
+              <img src="img/Previous.png" alt="next" class="nextSlide">
+            </div>
           </div>
         </div>
         <div class="block">
@@ -170,22 +169,24 @@
     </div>
     <!-- iPad Block -->
     <div data-scroll-watch class="iPad">
-      <div class="content">
-        <div>
-          <h3 class="iPadHead">They will change everything</h3>
-          <p class="iPadText">
-            Your eCommerce website is just the start. Whether you are an
-            established business or on the brink of a new idea, Squarespace
-            gives you the tools to take your business from online store to
-            recognized brand.
-          </p>
+      <div class="iPadWrap">
+        <div class="content">
+          <div>
+            <h3 class="iPadHead">They will change everything</h3>
+            <p class="iPadText">
+              Your eCommerce website is just the start. Whether you are an
+              established business or on the brink of a new idea, Squarespace
+              gives you the tools to take your business from online store to
+              recognized brand.
+            </p>
+          </div>
+          <button class="iPadButton">Get started</button>
         </div>
-        <button class="iPadButton">Get started</button>
-      </div>
+      </div>  
       <div class="image">
-        <img src="img/Previous2.png" alt="previous" />
-        <img src="img/iPad.png" alt="iPad" />
-      </div>
+          <img src="img/Previous2.png" alt="previous" />
+          <img src="img/iPad.png" alt="iPad" />
+        </div>
     </div>
     <!-- Platform feautures -->
     <div data-scroll-watch class="platform">
@@ -268,33 +269,33 @@
         <img src="img/quoteup.png" alt="quoteup" class="quoteup" />
         <img src="img/quotedown.png" alt="quotedown" class="quotedown" />
         <div class="quoteText">
-          <p>
+          <p class="quoteTextContent">
             It was some time before he obtained any answer, and the reply, when
             made, was unpropitious.
           </p>
-          <p>Sir Walter Scott</p>
+          <p class="quoteAuthor">Sir Walter Scott</p>
         </div>
       </div>
       <div class="quoteLeft">
         <img src="img/quoteup.png" alt="quoteup" class="quoteup" />
         <img src="img/quotedown.png" alt="quotedown" class="quotedown" />
         <div class="quoteText">
-          <p>
+          <p class="quoteTextContent">
             This I have produced as a scantling of Jack’s great eloquence and
             the force of his reasoning upon such abstruse matters.
           </p>
-          <p>Jonathan Swift</p>
+          <p class="quoteAuthor">Jonathan Swift</p>
         </div>
       </div>
       <div class="quoteRight">
         <img src="img/quoteup.png" alt="quoteup" class="quoteup" />
         <img src="img/quotedown.png" alt="quotedown" class="quotedown" />
         <div class="quoteText">
-          <p>
+          <p class="quoteTextContent">
             She gave my mother such a turn, that I have always been convinced I
             am indebted to Miss Betsey for having been born on a Friday.
           </p>
-          <p>Charles Dickens</p>
+          <p class="quoteAuthor">Charles Dickens</p>
         </div>
       </div>
     </div>
@@ -303,7 +304,7 @@
       <div class="doItWrap">
         <h3 class="doItName">Do it by yourself</h3>
         <div class="doItPhoto">
-          <img src="img/Photo7.png" alt="photo" />
+          <div class="photoback"><img src="img/Photo7.png" alt="photo"/></div>
           <div class="photoDemo">
             <img src="img/Photo3.png" alt="photo" /><button class="photoButton">
               View demo
@@ -311,9 +312,9 @@
           </div>
         </div>
         <div class="doItPhoto2"><img src="img/Photo.png" alt="photo" /></div>
-        <div class="doItPhoto">
-          <img src="img/Photo4.png" alt="photo" />
-          <img src="img/Photo6.png" alt="photo" />
+        <div class="doItPhoto3">
+          <img src="img/Photo4.png" alt="photo" class="photo4"/>
+          <img src="img/Photo6.png" alt="photo" class="photo6"/>
         </div>
       </div>
       <img src="img/Photo2.png" alt="photo" class="leftPhoto" />
@@ -347,8 +348,8 @@
       <img src="img/footer.png" alt="footer" class="footerLayer">
       <div class="footerText"><h3>This will change everything</h3></div>
       <div class="footerMenu">
-        <div><img src="img/LogoWhite.png" alt="logo"></div>
-        <div>
+        <div class="footerLogo"><img src="img/LogoWhite.png" alt="logo"></div>
+        <div class="footerMenuSection">
           <ul class="singleFooterMenu">
             <li>Pages</li>
             <li>Elements</li>
@@ -357,7 +358,7 @@
             <li>Work</li>
           </ul>
         </div>
-        <div>
+        <div class="footerMenuSection">
           <ul class="singleFooterMenu">
             <li>Support</li>
             <li>Answers</li>
@@ -365,7 +366,7 @@
             <li>Specials</li>
           </ul>
         </div>
-        <div>
+        <div class="footerMenuSection">
           <ul class="singleFooterMenu">
             <li>Terms of use</li>
             <li>Privacy policy</li>
@@ -375,12 +376,12 @@
         </div>
         <div class="footerAtt">
           <div> 
-            <p>Made by</p>
+            <p class="madeBy">Made by</p>
             <img src="img/Logofooter.png" alt="Logo">
           </div>
-          <div>
-            <p>www.getcraftwork.com</p>
-            <div>
+          <div class="communications">
+            <p class="web">www.getcraftwork.com</p>
+            <div class="socials">
               <img src="img/social.png" alt="social">
               <img src="img/social2.png" alt="social">
               <img src="img/social3.png" alt="social">

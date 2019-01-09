@@ -24,10 +24,16 @@
                 height 80%
                 top 10%
             .w3-content
-                width 400px
+                width 550px
                 transform: rotate(-45deg)
                 .mySlides
                     margin: 0 auto
+                    width: 30%
+                .mySlides:first-child
+                .prevSlide
+                    transform: rotate(45deg)
+                .nextSlide
+                    transform: rotate(-135deg)
         .block
             position relative
             background-color #ffffff
@@ -43,8 +49,10 @@
                     .blockItemName
                         font-size: 18px
                         margin-top 0
+                        font-weight: bold
                     .blockItemtext
                         font-size: 14px
+                        opacity 0.8
             .blockButton
                 border: none 
                 color #ffffff

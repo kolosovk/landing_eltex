@@ -14,13 +14,14 @@
         z-index -1
     .footerText
         position relative
-        width: 80%
-        margin 0 auto
+        width: 60%
+        margin 200px auto
         text-transform: uppercase
         z-index -2
         h3
             text-align: right
             font-size 90px
+            font-weight: bold
     .footerMenu
         margin: 0 auto 
         width 60%
@@ -32,15 +33,44 @@
         background-color #000000
         color #ffffff
         margin-bottom: 100px
-        .singleFooterMenu
-            list-style: none
-            text-transform: uppercase
-            li
-                padding-bottom: 20px
-                cursor: pointer
-                font-size: 12px
+        .footerLogo
+            width  5%
+        .footerMenuSection
+            width 15%
+            .singleFooterMenu
+                list-style: none
+                text-transform: uppercase
+                margin 0
+                li
+                    padding-bottom: 20px
+                    cursor: pointer
+                    font-size: 12px
+                    opacity 0.6
+                li:hover
+                    opacity 1
         .footerAtt
+            width 40%
             display: flex
             flex-direction: column
             justify-content: space-between
             align-items: flex-end
+            .madeBy
+                margin-top 0
+                opacity 0.4
+                text-align: right
+                text-transform: uppercase
+                font-size 11px
+            .communications
+                width 50%
+                .web
+                    margin-top 0
+                    opacity 0.4
+                    text-align: right
+                    font-size 12px
+                .socials
+                    display: flex
+                    justify-content: space-between
+                    img
+                        opacity 0.4
+                    img:hover
+                        opacity 1

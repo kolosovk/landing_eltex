@@ -82,7 +82,7 @@
   top: 50%;
   text-transform: uppercase;
   font-family: Montserrat;
-  margin-top: -101px;
+  margin-top: -180px;
   width: 40%;
 }
 .header .headerText .headerText1 {
@@ -100,6 +100,7 @@
   margin: 0 auto;
   opacity: 0;
   transition: opacity 1s;
+  min-height: 400px;
 }
 .firstFeautures .card {
   display: flex;
@@ -112,20 +113,26 @@
 }
 .firstFeautures .card .cardImg {
   flex-basis: 25%;
+  display: flex;
+  align-items: center;
 }
 .firstFeautures .card .cardName {
-  flex-basis: 25%;
+  flex-basis: 15%;
   margin: 0;
   text-transform: uppercase;
   font-size: 14px;
+  font-weight: bold;
+}
+.firstFeautures .card .cardName .newIcon {
+  margin-left: 10px;
 }
 .firstFeautures .card .cardText {
-  flex-basis: 40%;
-  margin: 0;
+  flex-basis: 30%;
+  margin: 0 20px;
   font-size: 14px;
 }
 .firstFeautures .card .cardButton {
-  flex-basis: 10%;
+  flex-basis: 30%;
   text-transform: uppercase;
   border: none;
   background: transparent;
@@ -163,11 +170,19 @@
   top: 10%;
 }
 .iPhoneWrap .iPhone .sliderBox .w3-content {
-  width: 400px;
+  width: 550px;
   transform: rotate(-45deg);
 }
 .iPhoneWrap .iPhone .sliderBox .w3-content .mySlides {
   margin: 0 auto;
+  width: 30%;
+}
+.iPhoneWrap .iPhone .sliderBox .w3-content .mySlides:first-child,
+.iPhoneWrap .iPhone .sliderBox .w3-content .prevSlide {
+  transform: rotate(45deg);
+}
+.iPhoneWrap .iPhone .sliderBox .w3-content .nextSlide {
+  transform: rotate(-135deg);
 }
 .iPhoneWrap .iPhone .block {
   position: relative;
@@ -187,9 +202,11 @@
 .iPhoneWrap .iPhone .block .blockItem .blockItemContent .blockItemName {
   font-size: 18px;
   margin-top: 0;
+  font-weight: bold;
 }
 .iPhoneWrap .iPhone .block .blockItem .blockItemContent .blockItemtext {
   font-size: 14px;
+  opacity: 0.8;
 }
 .iPhoneWrap .iPhone .block .blockButton {
   border: none;
@@ -217,38 +234,43 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 100px;
 }
 .buildIt .buildContent .buildName {
   font-size: 72px;
 }
 .buildIt .buildContent .buildText {
   font-size: 18px;
+  width: 40%;
+  text-align: center;
 }
 .buildIt .buildCards {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 80%;
+  width: 60%;
+  margin: 50px 0;
 }
 .buildIt .buildCards .card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  text-align: center;
   font-family: Montserrat;
   min-height: 250px;
+  flex-basis: 25%;
 }
 .buildIt .buildCards .card .cardName {
-  flex-basis: 25%;
+  flex-basis: 20%;
   margin: 0;
   text-transform: uppercase;
   font-size: 14px;
+  font-weight: bold;
 }
 .buildIt .buildCards .card .cardText {
-  flex-basis: 40%;
+  flex-basis: 70%;
   margin: 0;
   font-size: 14px;
+  opacity: 0.8;
 }
 .buildIt .buildCards .card .cardButton {
   flex-basis: 10%;
@@ -258,16 +280,22 @@
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+  text-align: left;
+  padding: 0;
 }
 .iPad {
   position: relative;
-  background-color: #000;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   opacity: 0;
   transition: opacity 1s;
 }
-.iPad .content {
+.iPad .iPadWrap {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #000;
+}
+.iPad .iPadWrap .content {
   color: #fff;
   min-height: 600px;
   display: flex;
@@ -277,39 +305,55 @@
   width: 40%;
   margin-left: 10%;
 }
-.iPad .content .iPadHead {
-  font-size: 36px;
+.iPad .iPadWrap .content .iPadHead {
+  font-size: 72px;
+  opacity: 0.8;
+  font-weight: 200;
 }
-.iPad .iPadButton {
+.iPad .iPadWrap .content .iPadText {
+  opacity: 0.8;
+  font-weight: 400;
+}
+.iPad .iPadWrap .iPadButton {
   background-color: #26e6e6;
   border: none;
   border-radius: 20px;
   color: #000;
   padding: 10px 20px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .iPad .image {
   position: absolute;
   top: 40%;
   right: 0;
-  margin-right: -10%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 80%;
+  width: 50%;
 }
 .iPad .image img {
   max-height: 600px;
 }
 .platform {
-  margin-top: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 60%;
+  margin: 300px auto 100px auto;
   opacity: 0;
   transition: opacity 1s;
+}
+.platform .platformHead {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+.platform .platformText {
+  width: 70%;
+  text-align: center;
+  font-size: 18px;
 }
 .platform .block {
   position: relative;
@@ -323,11 +367,17 @@
   display: flex;
   flex-basis: 30%;
 }
-.platform .block .blockItem .blockItemName {
-  font-size: 18px;
+.platform .block .blockItem .blockItemContent {
+  margin-left: 20px;
 }
-.platform .block .blockItem .blockItemtext {
+.platform .block .blockItem .blockItemContent .blockItemName {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+.platform .block .blockItem .blockItemContent .blockItemtext {
   font-size: 14px;
+  opacity: 0.8;
 }
 .quotes {
   position: relative;
@@ -354,17 +404,21 @@
 .quotes .quote .quoteText {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 5px 0;
   width: 90%;
 }
-.quotes .quote .quoteText p {
+.quotes .quote .quoteText .quoteTextContent {
   text-align: center;
   font-size: 42px;
+  flex-basis: 80%;
+  font-weight: 300;
 }
-.quotes .quote .quoteText p:last-child {
+.quotes .quote .quoteText .quoteAuthor {
+  text-align: center;
   text-transform: uppercase;
   font-size: 12px;
+  flex-basis: 20%;
 }
 .quotes .quoteLeft {
   position: absolute;
@@ -443,11 +497,22 @@
 .doIt .doItWrap .doItName {
   text-transform: uppercase;
   font-size: 26px;
+  font-weight: bold;
 }
 .doIt .doItWrap .doItPhoto {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  min-height: 420px;
+  height: 1px;
+}
+.doIt .doItWrap .doItPhoto .photoback {
+  position: relative;
+  left: -50px;
+  height: 80%;
+}
+.doIt .doItWrap .doItPhoto .photoback img {
+  height: 100%;
 }
 .doIt .doItWrap .doItPhoto .photoDemo {
   position: relative;
@@ -467,6 +532,21 @@
 }
 .doIt .doItWrap .doItPhoto2 {
   margin: 20px;
+  text-align: center;
+}
+.doIt .doItWrap .doItPhoto2 img {
+  width: 80%;
+}
+.doIt .doItWrap .doItPhoto3 {
+  position: relative;
+  width: 60%;
+  text-align: right;
+}
+.doIt .doItWrap .doItPhoto3 .photo4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
 }
 .doIt .leftPhoto {
   position: absolute;
@@ -483,6 +563,7 @@
   text-align: center;
   margin: 100px auto;
   font-size: 72px;
+  font-weight: lighter;
 }
 .prices {
   width: 60%;
@@ -502,6 +583,7 @@
 .prices .inactive .name {
   text-transform: uppercase;
   font-size: 12px;
+  font-weight: bold;
 }
 .prices .inactive .price {
   font-size: 50px;
@@ -514,6 +596,9 @@
   border: none;
   background: transparent;
   text-transform: uppercase;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
 }
 .prices .active {
   min-height: 450px;
@@ -528,6 +613,7 @@
 .prices .active .name {
   text-transform: uppercase;
   font-size: 12px;
+  font-weight: bold;
 }
 .prices .active .price {
   font-size: 50px;
@@ -535,6 +621,7 @@
 .prices .active .about {
   text-align: center;
   font-size: 14px;
+  opacity: 0.8;
 }
 .prices .active .getStarted {
   border: none;
@@ -542,6 +629,8 @@
   background: #26e6e6;
   padding: 10px 20px;
   text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
 }
 .footer {
   position: relative;
@@ -561,14 +650,15 @@
 }
 .footer .footerText {
   position: relative;
-  width: 80%;
-  margin: 0 auto;
+  width: 60%;
+  margin: 200px auto;
   text-transform: uppercase;
   z-index: -2;
 }
 .footer .footerText h3 {
   text-align: right;
   font-size: 90px;
+  font-weight: bold;
 }
 .footer .footerMenu {
   margin: 0 auto;
@@ -582,20 +672,58 @@
   color: #fff;
   margin-bottom: 100px;
 }
-.footer .footerMenu .singleFooterMenu {
+.footer .footerMenu .footerLogo {
+  width: 5%;
+}
+.footer .footerMenu .footerMenuSection {
+  width: 15%;
+}
+.footer .footerMenu .footerMenuSection .singleFooterMenu {
   list-style: none;
   text-transform: uppercase;
+  margin: 0;
 }
-.footer .footerMenu .singleFooterMenu li {
+.footer .footerMenu .footerMenuSection .singleFooterMenu li {
   padding-bottom: 20px;
   cursor: pointer;
   font-size: 12px;
+  opacity: 0.6;
+}
+.footer .footerMenu .footerMenuSection .singleFooterMenu li:hover {
+  opacity: 1;
 }
 .footer .footerMenu .footerAtt {
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+}
+.footer .footerMenu .footerAtt .madeBy {
+  margin-top: 0;
+  opacity: 0.4;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.footer .footerMenu .footerAtt .communications {
+  width: 50%;
+}
+.footer .footerMenu .footerAtt .communications .web {
+  margin-top: 0;
+  opacity: 0.4;
+  text-align: right;
+  font-size: 12px;
+}
+.footer .footerMenu .footerAtt .communications .socials {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footerMenu .footerAtt .communications .socials img {
+  opacity: 0.4;
+}
+.footer .footerMenu .footerAtt .communications .socials img:hover {
+  opacity: 1;
 }
 body {
   margin: 0;

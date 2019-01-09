@@ -19,15 +19,19 @@
         .quoteText
             display: flex
             flex-direction: column
-            justify-content: space-around
+            justify-content: space-between
             padding: 5px 0
             width: 90%
-            p
+            .quoteTextContent
                 text-align: center
                 font-size: 42px
-            p:last-child
+                flex-basis: 80%
+                font-weight: 300
+            .quoteAuthor
+                text-align: center
                 text-transform: uppercase
                 font-size 12px
+                flex-basis: 20%
     .quoteLeft
         position absolute
         top 0
